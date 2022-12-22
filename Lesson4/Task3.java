@@ -44,7 +44,7 @@ public class Task3 {
     public static boolean isSymmetric(TreeNode root) {
         if (root == null) return true;
         if (root.left == null && root.right == null) return true;
-        if (root.left == null && root.right == null) return false;
+        if (root.left == null || root.right == null) return false;
 
         ArrayDeque<TreeNode> stack = new ArrayDeque<>();
         stack.add(root.left);
