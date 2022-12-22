@@ -13,8 +13,7 @@ public class Task1 {
         for (String s : splitLine) {
             if (!s.equals(".") && !s.equals("..") && !s.equals("")) {
                 result.add(s);
-            }
-            if (s.equals("..")) {
+            } else if (s.equals("..")) {
                 result.pollLast();
             }
         }

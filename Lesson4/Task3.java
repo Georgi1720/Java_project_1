@@ -54,8 +54,10 @@ public class Task3 {
             TreeNode step1 = stack.pop();
             TreeNode step2 = stack.pop();
 
-            if (step1.val != step2.val || step1.left == null ^ step2.right == null || step1.right == null ^ step2.left == null)
+            if ((step1.val != step2.val) || (step1.left == null ^ step2.right == null) ||
+                    (step1.right == null ^ step2.left == null)) {
                 return false;
+            }
 
             if (step1.left != null) {
                 stack.add(step1.left);

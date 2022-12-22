@@ -38,8 +38,8 @@ public class Task2 {
                     for (int[] step : steps) {
                         int newRow = curRow + step[0];
                         int newCol = curCol + step[1];
-                        if ((newRow >= 0 && newRow < grid.length && newCol >= 0 && newCol < grid[0].length &&
-                                grid[newRow][newCol] == 1 && !isView[newRow][newCol])) {
+                        if ((newRow >= 0) && (newRow < grid.length) && (newCol >= 0) && (newCol < grid[0].length) &&
+                                (grid[newRow][newCol] == 1 && !isView[newRow][newCol])) {
                             stack.add(new int[]{newRow, newCol});
                             isView[newRow][newCol] = true;
                             area++;
